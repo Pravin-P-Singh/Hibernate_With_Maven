@@ -43,5 +43,15 @@
 		<!-- Not necessary below because naye methods se ek single annotation mai kam ban jata hai -->
 		<!-- hbm tells hibernate ki kaunse table ke sath relation banana hai -->
         <!-- <mapping resource="book.hbm.xml" /> -->
+        
+        <!-- Below properties are for the implementation of second level cache -->
+        <!-- Enable second-level cache -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+
+        <!-- Enable query cache (optional) -->
+        <property name="hibernate.cache.use_query_cache">true</property>
+
+        <!-- Specify cache provider -->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
     </session-factory>
 </hibernate-configuration>

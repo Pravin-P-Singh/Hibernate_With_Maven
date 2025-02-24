@@ -6,9 +6,9 @@ import org.hibernate.SessionFactory;
 import com.tka.config.Hibernate_Config;
 import com.tka.entity.Employee;
 
-public class Test {
+public class SaveEmployee {
 	public static void main(String[] args) {
-		Employee employee = new Employee(1,"aa","HR",40000);
+		Employee employee = new Employee(3,"cc","Architect",900000);
 		
 		SessionFactory sessionFactory = Hibernate_Config.getSessionFactory();
 		

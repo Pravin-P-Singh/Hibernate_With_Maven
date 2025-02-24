@@ -5,8 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Table(name="employee")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Employee {
 
 	@Id
